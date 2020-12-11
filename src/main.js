@@ -28,8 +28,25 @@ export default class App {
                 }
             }
             return true;
+        }
+    obtenerMultiplos(inicio, fin){
+        if(inicio > fin){
+            let t = inicio;
+            inicio = fin;
+            fin = t;
             }
-    
+            let i = inicio;
+            let string = "";
+            do {
+                if(i % 3 == 0)
+                string += i.toString();
+                i++;
+
+                } 
+            while(i<=fin);
+
+            return string;
+            }
 
 }
 
@@ -40,4 +57,6 @@ console.log(app.sumatoriaSerieDos(10));
 console.log("");
 console.log(app.esPrimo(3));
 console.log(app.esPrimo(4));
+console.log("");
+console.log(app.obtenerMultiplos(20,35));
 console.log("");
