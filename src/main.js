@@ -47,6 +47,22 @@ export default class App {
 
             return string;
             }
+    obtenerImpares(n1, n2){
+        let string = "";
+        if(n1 < n2) {
+            let aux = n1;
+            n1 = n2;
+            n2 = aux;
+            }
+            for(let i = n1; i>= n2; i--){
+                if(i % 2 != 0){
+                string += i + ',';
+                    }    
+                }
+            string = string.substring(0, string.length - 1);
+              
+        return string;
+                }
 
 }
 
@@ -58,5 +74,6 @@ console.log("");
 console.log(app.esPrimo(3));
 console.log(app.esPrimo(4));
 console.log("");
-console.log(app.obtenerMultiplos(20,35));
+console.log(app.obtenerMultiplos(10,25));
 console.log("");
+console.log(app.obtenerImpares(10,5));
